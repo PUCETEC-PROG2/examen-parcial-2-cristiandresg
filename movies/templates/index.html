@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Pagina Principal{% endblock title %}
+
+{% block content %} 
+<h1>Peliculas</h1>
+<ul class="list-group">
+{% for movie in movies %} 
+    <a href="{{movie.id}}">{{ movie | capfirst }} - {{movie.release_year}}</a>
+{% endfor %}
+</ul>
+
+
+{% endblock content %}
